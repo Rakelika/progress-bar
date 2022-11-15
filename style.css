@@ -1,5 +1,56 @@
 body {
-    background-color: #6dbcdb;
-
+    background-color: #FADDE1;
+    display: flex;
+    height: calc(100vh - 30px);
+    align-items: center;
+    justify-content: center;
 }
 
+.bar {
+    width: 400px;
+    height: 40px;
+    background-color: #fff;
+    position: relative;
+    box-shadow: 1px 1px 20px #8989897d;
+    border-radius: 5px;
+}
+
+.animated-bar {
+    height: 20px;
+    width: 350px;
+    background-color: #FF5D8F;
+    animation-duration: 2s;
+    animation-name: miAnimacion;
+    margin: 10px;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.bar-check {
+    position: absolute;
+    right: 10px;
+}
+
+.fa-heart {
+    color: #FF5D8F;
+    font-size: 20px;
+    padding: 10px 0px;
+    animation: miCorazon 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2s both;
+}
+
+
+@keyframes miAnimacion  {
+    0%  { width:0px;} 
+    100% { width:350px;}  
+}
+
+
+  @keyframes miCorazon {
+    0% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+  }
+  
